@@ -31,7 +31,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="navOffcanvas"
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="navOffcanvas"
            aria-labelledby="navOffcanvasLabel" aria-modal="true" role="dialog">
         <div class="offcanvas-header">
           <p class="offcanvas-title fw-bold text-lavender mb-0" id="navOffcanvasLabel">Kamalamalini Nagasundaram</h5>
@@ -325,30 +325,17 @@
     </section>
 
     <!-- ═══════════════════════════════════════
-         GITHUB REPOS SECTION
+         GITHUB SECTION
     ════════════════════════════════════════ -->
-    <section class="py-5" id="github-repos" aria-labelledby="github-heading">
+    <section class="py-5 text-center" id="github-repos">
       <div class="container">
-
-        <div class="text-center mb-5">
-          <div class="section-divider divider-lavender mx-auto"></div>
-          <h2 class="section-title" id="github-heading">
-            <i class="bi bi-github me-2"></i>GitHub Repositories
-          </h2>
-          <p class="section-subtitle">My latest public work, loaded live from GitHub</p>
-        </div>
-
-        <!-- Loading spinner -->
-        <div id="reposLoading" class="text-center py-4">
-          <div class="spinner-border" style="color: var(--accent-text);" role="status">
-            <span class="visually-hidden">Loading repositories…</span>
-          </div>
-          <p class="mt-2 text-muted small">Fetching repos from GitHub…</p>
-        </div>
-
-        <!-- Cards injected here by main.js -->
-        <div class="row g-4" id="githubRepos"></div>
-
+        <div class="section-divider divider-lavender mx-auto mb-3"></div>
+        <h2 class="section-title mb-2">More on GitHub</h2>
+        <p class="section-subtitle mb-4">Check out my public repositories and open-source work</p>
+        <a href="https://github.com/MaliniSundar1625" target="_blank" rel="noopener noreferrer"
+           class="btn-primary-custom" style="display:inline-flex; align-items:center; gap:0.5rem;">
+          <i class="bi bi-github"></i> View My GitHub Profile
+        </a>
       </div>
     </section>
 
