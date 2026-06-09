@@ -423,4 +423,3 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchGithubRepos();
   initJQueryFeatures();
 });
-                                 
