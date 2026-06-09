@@ -24,6 +24,8 @@
   --surface-2:       #f0eafc;
   --text:            #2d2040;
   --text-muted:      #6b5f8a;
+  --accent-text:     #6d45b0;
+  --accent-green:    #1e6b50;
   --border:          #ddd5ef;
 
   --navbar-bg:       #f0eafc;
@@ -67,13 +69,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--lavender-dark);
+  color: var(--accent-text);
   text-decoration: none;
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--mint-dark);
+  color: var(--accent-green);
 }
 
 img {
@@ -94,12 +96,12 @@ img {
 .navbar-brand {
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--lavender-dark) !important;
+  color: var(--accent-text) !important;
   letter-spacing: -0.3px;
 }
 
 .navbar-brand span {
-  color: var(--mint-dark);
+  color: var(--accent-text);
 }
 
 .navbar .nav-link {
@@ -228,7 +230,7 @@ section {
 .hero-greeting {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--lavender-dark);
+  color: var(--accent-text);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
@@ -990,8 +992,8 @@ footer a:hover {
 }
 
 /* ── Utility Classes ────────────────────────────────────────── */
-.text-lavender { color: var(--lavender-dark) !important; }
-.text-mint     { color: var(--mint-dark) !important; }
+.text-lavender { color: var(--accent-text) !important; }
+.text-mint     { color: var(--accent-green) !important; }
 .bg-surface    { background-color: var(--surface) !important; }
 .gap-sm        { gap: 0.5rem; }
 
@@ -1002,4 +1004,4 @@ footer a:hover {
   border-radius: var(--radius-pill);
 }
 
-.badge-lavender { background: var(--lavender-light); color: var
+.ba
