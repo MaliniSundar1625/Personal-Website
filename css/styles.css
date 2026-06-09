@@ -115,7 +115,7 @@ img {
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: var(--lavender-dark) !important;
+  color: var(--accent-text) !important;
   background-color: var(--lavender-light);
 }
 
@@ -323,7 +323,7 @@ section {
   box-shadow: var(--shadow-md);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--lavender-dark);
+  color: var(--accent-text);
   border: 2px solid var(--lavender-light);
 }
 
@@ -351,8 +351,8 @@ section {
 
 .btn-outline-custom {
   background: transparent;
-  color: var(--lavender-dark);
-  border: 2px solid var(--lavender-dark);
+  color: var(--accent-text);
+  border: 2px solid var(--accent-text);
   border-radius: var(--radius-pill);
   padding: 0.65rem 1.8rem;
   font-weight: 600;
@@ -515,7 +515,7 @@ section {
 
 .exp-org {
   font-size: 0.95rem;
-  color: var(--lavender-dark);
+  color: var(--accent-text);
   font-weight: 600;
 }
 
@@ -543,7 +543,7 @@ section {
 
 .accordion-button:not(.collapsed) {
   background-color: var(--lavender-light) !important;
-  color: var(--lavender-dark) !important;
+  color: var(--accent-text) !important;
   box-shadow: none !important;
 }
 
@@ -619,12 +619,12 @@ section {
   margin-bottom: 0.4rem;
 }
 
-.tag-ai       { background: var(--lavender-light); color: var(--lavender-dark); }
-.tag-web      { background: var(--mint-light);     color: var(--mint-dark); }
-.tag-research { background: var(--pink-light);      color: #c05090; }
-.tag-ml       { background: var(--peach-light);     color: #c07a20; }
-.tag-python   { background: var(--sky-light);       color: #2a7ab5; }
-.tag-js       { background: #fffde7;               color: #a07800; }
+.tag-ai       { background: var(--lavender-light); color: var(--accent-text); }
+.tag-web      { background: var(--mint-light);     color: var(--accent-green); }
+.tag-research { background: var(--pink-light);      color: #8b1a5e; }
+.tag-ml       { background: var(--peach-light);     color: #8a5200; }
+.tag-python   { background: var(--sky-light);       color: #1a5a8a; }
+.tag-js       { background: #fffde7;               color: #7a5c00; }
 
 .project-title {
   font-size: 1.15rem;
@@ -771,7 +771,7 @@ section {
 
 .toast-header {
   background: var(--mint-light);
-  color: var(--mint-dark);
+  color: var(--accent-green);
   border-bottom: 1px solid var(--border);
 }
 
@@ -1004,4 +1004,4 @@ footer a:hover {
   border-radius: var(--radius-pill);
 }
 
-.ba
+.badge-lave
