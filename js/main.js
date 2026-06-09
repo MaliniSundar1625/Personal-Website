@@ -414,4 +414,35 @@ const initJQueryFeatures = () => {
   // Animate stat numbers on scroll into view (jQuery-powered)
   const animateStat = ($el) => {
     const target = parseInt($el.text(), 10);
-    if (isNaN(target)) re
+    if (isNaN(target)) return;
+    $({ count: 0 }).animate({ count: target }, {
+      duration: 1200,
+      easing: 'swing',
+      step: function () {
+        $el.text(Math.floor(this.count) + '+');
+      },
+      complete: function () {
+        $el.text($el.data('original'));
+      },
+    });
+  };
+
+  // Store original text and animate on first scroll into view
+  $('.stat-number').each(function () {
+    $(this).data('original', $(this).text());
+  });
+};
+
+/* ─────────────────────────────────────────────────────────────
+   INITIALISATION — runs when the DOM is ready
+───────────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  setActiveNavLink();
+  initTypingAnimation();
+  initScrollAnimations();
+  initBackToTop();
+  initContactForm();
+  initCharCounter();
+  initProjectFilters();
+  initJQueryFeatures();
+});
