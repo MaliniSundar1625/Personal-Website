@@ -15,6 +15,9 @@
  *  10. jQuery: smooth scroll for anchor links
  */
 
+// Mark JS as available — scopes fade-in CSS so elements stay visible if JS fails
+document.documentElement.classList.add('js');
+
 'use strict'; // Enforce stricter parsing and error handling
 
 /* ─────────────────────────────────────────────────────────────

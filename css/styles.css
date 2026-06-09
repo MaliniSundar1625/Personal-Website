@@ -892,45 +892,46 @@ footer a:hover {
 }
 
 /* ── Scroll Animation Classes ───────────────────────────────── */
-/* Applied by IntersectionObserver in main.js */
-.fade-in-up {
+/* Only hide elements when JS is confirmed running (.js class on <html>).
+   Without this guard, if JS fails to execute everything stays invisible. */
+.js .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-in-up.visible {
+.js .fade-in-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.fade-in-left {
+.js .fade-in-left {
   opacity: 0;
   transform: translateX(-30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-in-left.visible {
+.js .fade-in-left.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-.fade-in-right {
+.js .fade-in-right {
   opacity: 0;
   transform: translateX(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-in-right.visible {
+.js .fade-in-right.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
 /* Staggered delay for cards in a grid */
-.fade-in-up:nth-child(1) { transition-delay: 0.05s; }
-.fade-in-up:nth-child(2) { transition-delay: 0.15s; }
-.fade-in-up:nth-child(3) { transition-delay: 0.25s; }
-.fade-in-up:nth-child(4) { transition-delay: 0.35s; }
+.js .fade-in-up:nth-child(1) { transition-delay: 0.05s; }
+.js .fade-in-up:nth-child(2) { transition-delay: 0.15s; }
+.js .fade-in-up:nth-child(3) { transition-delay: 0.25s; }
+.js .fade-in-up:nth-child(4) { transition-delay: 0.35s; }
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 991.98px) {
@@ -1001,6 +1002,4 @@ footer a:hover {
   border-radius: var(--radius-pill);
 }
 
-.badge-lavender { background: var(--lavender-light); color: var(--lavender-dark); }
-.badge-mint     { background: var(--mint-light);     color: var(--mint-dark); }
-.badge-pink     { background: var(--pink-
+.badge-lavender { background: var(--lavender-light); color: var
