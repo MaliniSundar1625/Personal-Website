@@ -1,7 +1,7 @@
 # Personal-Website
 
 ## Project Overview
-A responsive, multi-page personal portfolio website showcasing my background as a CS educator, Ph.D. candidate, and software developer. The site features pastel aesthetics, smooth scroll animations, a live GitHub API integration, real-time form validation, and several Bootstrap components not covered in class.
+A responsive, multi-page personal portfolio website showcasing my background as a CS educator, Ph.D. student, and software developer. The site features pastel aesthetics, smooth scroll animations, a live GitHub API integration, real-time form validation, and several Bootstrap components not covered in class.
 
 ### Pages
 
