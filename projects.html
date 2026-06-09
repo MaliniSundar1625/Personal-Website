@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Kamalamalini Nagasundaram – AI research, web development, and more." />
+  <title>Projects – Kamalamalini Nagasundaram</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Kamalamalini <span>Nagasundaram</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas"
+              aria-controls="navOffcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="navOffcanvas"
+           aria-labelledby="navOffcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title fw-bold text-lavender" id="navOffcanvasLabel">Kamalamalini Nagasundaram</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person me-2"></i>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html"><i class="bi bi-briefcase me-2"></i>Experience</a></li>
+            <li class="nav-item"><a class="nav-link active" href="projects.html"><i class="bi bi-code-slash me-2"></i>Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         PAGE HERO
+    ════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Projects page header">
+      <div class="container text-center">
+        <div class="section-divider divider-lavender mx-auto mb-3"></div>
+        <h1 class="fw-bold">My Projects</h1>
+        <p class="lead mt-2">Research, web apps, and everything in between</p>
+
+        <!-- Filter Buttons – JS-powered filtering (beyond-class interactivity) -->
+        <div class="mt-4 d-flex flex-wrap justify-content-center gap-2" id="filterButtons"
+             role="group" aria-label="Filter projects by category">
+          <button class="btn btn-sm btn-primary-custom filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="btn btn-sm btn-outline-custom filter-btn" data-filter="research">
+            <i class="bi bi-journal-text me-1"></i> Research
+          </button>
+          <button class="btn btn-sm btn-outline-custom filter-btn" data-filter="web">
+            <i class="bi bi-globe me-1"></i> Web Dev
+          </button>
+          <button class="btn btn-sm btn-outline-custom filter-btn" data-filter="ai">
+            <i class="bi bi-robot me-1"></i> AI/ML
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS GRID
+    ════════════════════════════════════════ -->
+    <section class="projects-section py-5" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <div id="projectsGrid" class="row g-4">
+
+          <!-- ── PROJECT 1: IdeaFest ── -->
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="research">
+            <article class="project-card">
+              <div class="project-card-header" style="background:linear-gradient(135deg,var(--lavender-light),var(--pink-light));">
+                <div class="project-icon" style="background:white;">🏆</div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tag tag-research">Research</span>
+                  <span class="project-tag tag-ai">AI</span>
+                </div>
+                <h2 class="project-title">PSU IdeaFest Research Project</h2>
+              </div>
+              <div class="project-card-body">
+                <!-- TODO: Replace with your actual IdeaFest project description -->
+                <p class="project-desc">
+                  Presented at Portland State University's annual IdeaFest — a celebration
+                  of student scholarship and creative inquiry. This project explored
+                  [your actual topic here]. The work demonstrated [key findings or outcomes].
+                </p>
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="project-tag tag-python">Python</span>
+                    <span class="project-tag tag-ml">Machine Learning</span>
+                  </div>
+                  <div class="project-links">
+                    <!-- TODO: Add actual links -->
+                    <a href="#" class="btn btn-sm" target="_blank" rel="noopener"
+                       style="background:var(--lavender-light);color:var(--lavender-dark);"
+                       aria-label="View IdeaFest poster or slides">
+                      <i class="bi bi-easel2"></i> Poster / Slides
+                    </a>
+                    <span class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true"
+                          title="Repository coming soon">
+                      <i class="bi bi-github"></i> Repo (Soon)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── PROJECT 2: ASEE Paper ── -->
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="research">
+            <article class="project-card">
+              <div class="project-card-header" style="background:linear-gradient(135deg,var(--mint-light),var(--sky-light));">
+                <div class="project-icon" style="background:white;">📄</div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tag tag-research">Conference</span>
+                  <span class="project-tag tag-python">Education</span>
+                </div>
+                <!-- TODO: Replace with your actual paper title -->
+                <h2 class="project-title">ASEE Conference Paper: [Your Title]</h2>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">
+                  <!-- TODO: Replace with your actual abstract/description -->
+                  Paper accepted and presented at the American Society for Engineering
+                  Education (ASEE) Annual Conference. This paper addressed [your topic],
+                  proposing [your approach] and demonstrating [key results]. Co-authored
+                  with [your collaborators / advisors].
+                </p>
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="project-tag tag-research">ASEE</span>
+                    <span class="project-tag tag-ai">Engineering Education</span>
+                  </div>
+                  <div class="project-links">
+                    <!-- TODO: Add actual paper link -->
+                    <a href="#" class="btn btn-sm" target="_blank" rel="noopener"
+                       style="background:var(--mint-light);color:var(--mint-dark);"
+                       aria-label="View ASEE paper">
+                      <i class="bi bi-file-earmark-text"></i> Paper
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"
+                       aria-label="View ASEE presentation slides">
+                      <i class="bi bi-easel2"></i> Slides
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── PROJECT 3: Neuro-Symbolic AI ── -->
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="ai research">
+            <article class="project-card">
+              <div class="project-card-header" style="background:linear-gradient(135deg,var(--peach-light),var(--lavender-light));">
+                <div class="project-icon" style="background:white;">🧠</div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tag tag-ai">Neuro-Symbolic</span>
+                  <span class="project-tag tag-ml">Deep Learning</span>
+                </div>
+                <!-- TODO: Replace with your actual paper title -->
+                <h2 class="project-title">Neuro-Symbolic AI: [Your Paper Title]</h2>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">
+                  <!-- TODO: Replace with actual description -->
+                  Research paper exploring the intersection of neural networks and symbolic
+                  reasoning. Proposed a novel architecture that [describe your approach].
+                  Demonstrated improvements in [metric] by [X]% compared to baseline approaches.
+                  Published / submitted to [Journal or Conference Name].
+                </p>
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="project-tag tag-python">Python</span>
+                    <span class="project-tag tag-ml">PyTorch</span>
+                    <span class="project-tag tag-ai">AI</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" class="btn btn-sm" target="_blank" rel="noopener"
+                       style="background:var(--peach-light);color:#c07a20;"
+                       aria-label="View paper">
+                      <i class="bi bi-file-earmark-text"></i> Paper
+                    </a>
+                    <span class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true"
+                          title="Repository coming soon">
+                      <i class="bi bi-github"></i> Code (Soon)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── PROJECT 4: Portfolio Website (this one!) ── -->
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="web">
+            <article class="project-card">
+              <div class="project-card-header" style="background:linear-gradient(135deg,var(--pink-light),var(--lavender-light));">
+                <div class="project-icon" style="background:white;">🌸</div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tag tag-web">Web Dev</span>
+                  <span class="project-tag tag-js">JavaScript</span>
+                </div>
+                <h2 class="project-title">Personal Portfolio Website</h2>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">
+                  This portfolio website — built as the CS 463/563 Final Project. A fully
+                  responsive multi-page site using HTML5, CSS3 with custom properties, Bootstrap 5,
+                  and vanilla JavaScript (ES6+). Features include scroll animations,
+                  Bootstrap Offcanvas mobile nav, form validation, and a typing animation hero.
+                </p>
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="project-tag tag-web">HTML/CSS</span>
+                    <span class="project-tag tag-js">Bootstrap 5</span>
+                    <span class="project-tag tag-js">JavaScript</span>
+                  </div>
+                  <div class="project-links">
+                    <!-- TODO: Add your actual GitHub repo link -->
+                    <a href="https://github.com/MaliniSundar1625" class="btn btn-sm btn-outline-secondary"
+                       target="_blank" rel="noopener" aria-label="View portfolio source on GitHub">
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a href="https://YOUR_USERNAME.github.io" class="btn btn-sm"
+                       target="_blank" rel="noopener"
+                       style="background:var(--pink-light);color:#c05090;"
+                       aria-label="View live portfolio site">
+                      <i class="bi bi-globe"></i> Live Site
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── PROJECT 5: Placeholder Web App ── -->
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="web ai">
+            <article class="project-card">
+              <div class="project-card-header" style="background:linear-gradient(135deg,var(--sky-light),var(--mint-light));">
+                <div class="project-icon" style="background:white;">☁️</div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tag tag-web">Full Stack</span>
+                  <span class="project-tag tag-python">Python</span>
+                </div>
+                <!-- TODO: Replace with an actual project you've done, or remove this card -->
+                <h2 class="project-title">Weather Dashboard App</h2>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">
+                  A responsive weather dashboard that fetches real-time weather data from the
+                  OpenWeatherMap API. Features a 5-day forecast, geolocation support, unit
+                  toggling (°F / °C), and animated weather icons. Built with vanilla JavaScript
+                  and Bootstrap.
+                </p>
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="project-tag tag-js">JavaScript</span>
+                    <span class="project-tag tag-web">REST API</span>
+                    <span class="project-tag tag-js">Bootstrap</span>
+                  </div>
+                  <div class="project-links">
+                    <span class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true">
+                      <i class="bi bi-github"></i> GitHub (Soon)
+                    </span>
+                    <span class="btn btn-sm disabled" style="background:var(--sky-light);color:#2a7ab5;">
+                      <i class="bi bi-globe"></i> Demo (Soon)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── PROJECT 6: Placeholder Data/AI ── -->
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="ai">
+            <article class="project-card">
+              <div class="project-card-header" style="background:linear-gradient(135deg,var(--lavender-light),var(--mint-light));">
+                <div class="project-icon" style="background:white;">📊</div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tag tag-ai">ML</span>
+                  <span class="project-tag tag-python">Python</span>
+                </div>
+                
+                <h2 class="project-title">Sentiment Analysis Pipeline</h2>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">
+                  A text classification pipeline using BERT and fine-tuned transformers to
+                  perform multi-class sentiment analysis on product reviews. Achieved 92%
+                  accuracy on the test set. Includes a simple Flask API endpoint for inference.
+                </p>
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    <span class="project-tag tag-python">Python</span>
+                    <span class="project-tag tag-ml">PyTorch</span>
+                    <span class="project-tag tag-ai">NLP</span>
+                  </div>
+                  <div class="project-links">
+                    <span class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true">
+                      <i class="bi bi-github"></i> GitHub (Soon)
+                    </span>
+                    <span class="btn btn-sm disabled" style="background:var(--lavender-light);color:var(--lavender-dark);">
+                      <i class="bi bi-file-earmark-text"></i> Docs (Soon)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /projectsGrid -->
+
+        <!-- No Results Message (shown by JS when filter has no matches) -->
+        <div id="noResults" class="text-center py-5 d-none" role="status" aria-live="polite">
+          <i class="bi bi-search fs-1 text-muted"></i>
+          <p class="text-muted mt-3">No projects found in this category.</p>
+        </div>
+
+        <!-- GitHub Repos Section (fetched via API in main.js) -->
+        <div class="mt-5 pt-3">
+          <div class="section-divider divider-lavender"></div>
+          <h3 class="h4 fw-bold mb-2">
+            <i class="bi bi-github me-2"></i>GitHub Activity
+          </h3>
+          <p class="text-muted mb-4">
+            Public repositories fetched live from GitHub
+            — <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">
+              view all on GitHub
+            </a>
+          </p>
+          <div id="githubRepos" class="row g-3">
+            <!-- Populated by fetchGithubRepos() in main.js -->
+            <div class="col-12 text-center text-muted" id="reposLoading">
+              <div class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></div>
+              Loading GitHub repositories…
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="mb-3">Kamalamalini Nagasundaram</h5>
+          <p>Instructor at Oregon Tech and Ph.D. Student at Portland State.</p>
+          <div class="footer-social">
+            <a href="https://github.com/MaliniSundar1625" class="footer-social-link"
+               target="_blank" rel="noopener" aria-label="GitHub profile">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kn1606/" class="footer-social-link"
+               target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:malinisundar1625@gmail.com" class="footer-social-link"
+               aria-label="Send email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-1"><a href="index.html"><i class="bi bi-chevron-right me-1"></i>About</a></li>
+            <li class="mb-1"><a href="experience.html"><i class="bi bi-chevron-right me-1"></i>Experience</a></li>
+            <li class="mb-1"><a href="projects.html"><i class="bi bi-chevron-right me-1"></i>Projects</a></li>
+            <li class="mb-1"><a href="contact.html"><i class="bi bi-chevron-right me-1"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3">Get In Touch</h5>
+          <p>Open to research collaborations, internships, and interesting projects!</p>
+          <a href="contact.html" class="btn-mint mt-1" style="text-decoration:none;">
+            <i class="bi bi-send"></i> Say Hello
+          </a>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <p class="footer-bottom">
+        © 2025 Kamalamalini Nagasundaram &nbsp;·&nbsp; Built with HTML, CSS, Bootstrap &amp; JavaScript
+       
+      </p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
