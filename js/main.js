@@ -282,73 +282,97 @@ const initProjectFilters = () => {
 
 /* ─────────────────────────────────────────────────────────────
    8. GITHUB API FETCH
-   Fetches public repos and renders cards in #githubRepos.
-   TODO: Replace 'YOUR_GITHUB_USERNAME' with your actual username.
+   Fetches public repos dynamically using Fetch API + async/await
+   and renders repo cards into #githubRepos on projects.html.
 ───────────────────────────────────────────────────────────── */
 const fetchGithubRepos = async () => {
   const container = document.getElementById('githubRepos');
   const loading   = document.getElementById('reposLoading');
   if (!container) return;
 
-  const GITHUB_USERNAME = 'YOUR_GITHUB_USERNAME'; // ← TODO: replace this
+  const GITHUB_USERNAME = 'MaliniSundar1625';
+  const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=9&type=public`;
 
   try {
-    const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`,
-      { headers: { 'Accept': 'application/vnd.github.v3+json' } }
-    );
+    const response = await fetch(API_URL, {
+      headers: { 'Accept': 'application/vnd.github.v3+json' }
+    });
 
     if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
+      throw new Error(`GitHub API responded with status ${response.status}`);
     }
 
     const repos = await response.json();
     if (loading) loading.remove();
 
     if (!repos.length) {
-      container.innerHTML = '<p class="text-muted">No public repositories found.</p>';
+      container.innerHTML = '<p class="text-muted text-center">No public repositories found.</p>';
       return;
     }
 
-    const repoCards = repos.map(repo => `
+    // Build a card for each repo
+    const repoCards = repos.map(repo => {
+      // Pick a tag colour based on primary language
+      const langColours = {
+        JavaScript: 'tag-js',  TypeScript: 'tag-python',
+        Python:     'tag-ai',  Java: 'tag-research',
+        HTML:       'tag-web', CSS: 'tag-web',
+      };
+      const langClass = repo.language ? (langColours[repo.language] || 'tag-ml') : '';
+      const langBadge = repo.language
+        ? `<span class="badge-custom ${langClass} small">${repo.language}</span>`
+        : '';
+
+      // Format last-updated date
+      const updated = new Date(repo.updated_at).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'short', day: 'numeric'
+      });
+
+      return `
       <div class="col-md-6 col-lg-4">
-        <div class="exp-card lavender h-100">
+        <div class="exp-card lavender h-100 d-flex flex-column">
           <div class="d-flex justify-content-between align-items-start mb-2">
-            <i class="bi bi-folder2-open fs-4 text-lavender"></i>
+            <i class="bi bi-folder2-open fs-4" style="color:var(--accent-text);"></i>
             <div class="d-flex gap-2 small text-muted">
-              <span><i class="bi bi-star me-1"></i>${repo.stargazers_count}</span>
-              <span><i class="bi bi-diagram-2 me-1"></i>${repo.forks_count}</span>
+              <span title="Stars"><i class="bi bi-star me-1"></i>${repo.stargazers_count}</span>
+              <span title="Forks"><i class="bi bi-diagram-2 me-1"></i>${repo.forks_count}</span>
             </div>
           </div>
-          <div class="exp-title">
-            <a href="${repo.html_url}" target="_blank" rel="noopener"
+
+          <div class="exp-title mb-1">
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer"
+               aria-label="View ${repo.name} on GitHub"
                style="color:inherit; text-decoration:none;">${repo.name}</a>
           </div>
-          <p class="small text-muted mt-1 mb-2">
-            ${repo.description || 'No description provided.'}
+
+          <p class="small text-muted mt-1 mb-2 flex-grow-1">
+            ${repo.description ? repo.description : '<em>No description provided.</em>'}
           </p>
-          ${repo.language
-            ? `<span class="badge-custom badge-mint small">${repo.language}</span>`
-            : ''}
+
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top" style="border-color:var(--border)!important;">
+            ${langBadge}
+            <span class="small text-muted" title="Last updated">
+              <i class="bi bi-clock me-1"></i>${updated}
+            </span>
+          </div>
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
 
     container.innerHTML = repoCards;
 
   } catch (err) {
-    // Graceful fallback if API unavailable or username not set
     if (loading) loading.remove();
     container.innerHTML = `
-      <div class="col-12">
-        <p class="text-muted small">
-          <i class="bi bi-info-circle me-1"></i>
-          GitHub repos will appear here once you update <code>GITHUB_USERNAME</code> in
-          <code>js/main.js</code>. &nbsp;
-          <a href="https://github.com/${GITHUB_USERNAME}" target="_blank" rel="noopener">
-            View on GitHub
-          </a>
+      <div class="col-12 text-center py-3">
+        <p class="text-muted small mb-2">
+          <i class="bi bi-exclamation-circle me-1"></i>
+          Could not load repositories right now.
         </p>
+        <a href="https://github.com/${GITHUB_USERNAME}" target="_blank" rel="noopener noreferrer"
+           class="btn-outline-custom" style="font-size:0.85rem; padding:0.4rem 1rem;">
+          <i class="bi bi-github me-1"></i> View on GitHub
+        </a>
       </div>`;
     console.warn('GitHub API fetch failed:', err.message);
   }
@@ -390,36 +414,4 @@ const initJQueryFeatures = () => {
   // Animate stat numbers on scroll into view (jQuery-powered)
   const animateStat = ($el) => {
     const target = parseInt($el.text(), 10);
-    if (isNaN(target)) return;
-    $({ count: 0 }).animate({ count: target }, {
-      duration: 1200,
-      easing: 'swing',
-      step: function () {
-        $el.text(Math.floor(this.count) + '+');
-      },
-      complete: function () {
-        $el.text($el.data('original'));
-      },
-    });
-  };
-
-  // Store original text and animate on first scroll into view
-  $('.stat-number').each(function () {
-    $(this).data('original', $(this).text());
-  });
-};
-
-/* ─────────────────────────────────────────────────────────────
-   INITIALISATION — runs when the DOM is ready
-───────────────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-  setActiveNavLink();
-  initTypingAnimation();
-  initScrollAnimations();
-  initBackToTop();
-  initContactForm();
-  initCharCounter();
-  initProjectFilters();
-  fetchGithubRepos();
-  initJQueryFeatures();
-});
+    if (isNaN(target)) re
