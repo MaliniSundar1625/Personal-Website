@@ -60,7 +60,6 @@
         <h1 class="fw-bold">My Projects</h1>
         <p class="lead mt-2">Research, web apps, and everything in between</p>
 
-        <!-- Filter Buttons – JS-powered filtering (beyond-class interactivity) -->
         <div class="mt-4 d-flex flex-wrap justify-content-center gap-2" id="filterButtons"
              role="group" aria-label="Filter projects by category">
           <button class="btn btn-sm btn-primary-custom filter-btn active" data-filter="all">
@@ -96,31 +95,28 @@
                   <span class="project-tag tag-research">Research</span>
                   <span class="project-tag tag-ai">AI</span>
                 </div>
-                <h2 class="project-title">PSU IdeaFest Research Project</h2>
+                <h2 class="project-title">OIT IdeaFest: Free Reliable AI for Every Student</h2>
               </div>
               <div class="project-card-body">
-                <!-- TODO: Replace with your actual IdeaFest project description -->
                 <p class="project-desc">
-                  Presented at Portland State University's annual IdeaFest — a celebration
-                  of student scholarship and creative inquiry. This project explored
-                  [your actual topic here]. The work demonstrated [key findings or outcomes].
+                  Presented at Oregon Institute of Technology's annual IdeaFest, a celebration
+                  of student scholarship and creativity. AI tools are increasingly used in CS education
+                  for code explanation, debugging, and feedback, yet most evaluations hide a critical
+                  reality: the same model can answer the same prompt differently across repeated runs,
+                  and educational AI must be trustworthy and reproducible, not just performant.
                 </p>
                 <div class="mt-auto">
                   <div class="d-flex flex-wrap gap-1 mb-3">
                     <span class="project-tag tag-python">Python</span>
-                    <span class="project-tag tag-ml">Machine Learning</span>
+                    <span class="project-tag tag-ml">LLMs</span>
+                    <span class="project-tag tag-ai">CS Education</span>
                   </div>
                   <div class="project-links">
-                    <!-- TODO: Add actual links -->
-                    <a href="#" class="btn btn-sm" target="_blank" rel="noopener"
+                    <a href="assets/IdeaFest_2026_Poster_Final.pdf" class="btn btn-sm" target="_blank" rel="noopener"
                        style="background:var(--lavender-light);color:var(--lavender-dark);"
-                       aria-label="View IdeaFest poster or slides">
-                      <i class="bi bi-easel2"></i> Poster / Slides
+                       aria-label="View IdeaFest poster">
+                      <i class="bi bi-easel2"></i> Poster
                     </a>
-                    <span class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true"
-                          title="Repository coming soon">
-                      <i class="bi bi-github"></i> Repo (Soon)
-                    </span>
                   </div>
                 </div>
               </div>
@@ -131,37 +127,32 @@
           <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="research">
             <article class="project-card">
               <div class="project-card-header" style="background:linear-gradient(135deg,var(--mint-light),var(--sky-light));">
-                <div class="project-icon" style="background:white;">📄</div>
+                <div class="project-icon" style="background:white;">🎓</div>
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tag tag-research">Conference</span>
                   <span class="project-tag tag-python">Education</span>
                 </div>
-                <!-- TODO: Replace with your actual paper title -->
-                <h2 class="project-title">ASEE Conference Paper: [Your Title]</h2>
+                <h2 class="project-title">ASEE: Diagnosing CS1 Misconceptions with LLMs</h2>
               </div>
               <div class="project-card-body">
                 <p class="project-desc">
-                  <!-- TODO: Replace with your actual abstract/description -->
-                  Paper accepted and presented at the American Society for Engineering
-                  Education (ASEE) Annual Conference. This paper addressed [your topic],
-                  proposing [your approach] and demonstrating [key results]. Co-authored
-                  with [your collaborators / advisors].
+                  Paper accepted at the American Society for Engineering Education (ASEE) Annual
+                  Conference, 2026. As LLMs become routine tools in CS1 courses, their instructional
+                  reliability remains under-scrutinized; models that generate correct code may still
+                  misdiagnose the conceptual errors novice programmers actually make. This study
+                  examines diagnostic alignment, cross-model variability, and prompt sensitivity.
                 </p>
                 <div class="mt-auto">
                   <div class="d-flex flex-wrap gap-1 mb-3">
                     <span class="project-tag tag-research">ASEE</span>
-                    <span class="project-tag tag-ai">Engineering Education</span>
+                    <span class="project-tag tag-ai">LLMs</span>
+                    <span class="project-tag tag-python">CS Education</span>
                   </div>
                   <div class="project-links">
-                    <!-- TODO: Add actual paper link -->
-                    <a href="#" class="btn btn-sm" target="_blank" rel="noopener"
+                    <a href="assets/ASEE_draft_updated.pdf" class="btn btn-sm" target="_blank" rel="noopener"
                        style="background:var(--mint-light);color:var(--mint-dark);"
                        aria-label="View ASEE paper">
                       <i class="bi bi-file-earmark-text"></i> Paper
-                    </a>
-                    <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"
-                       aria-label="View ASEE presentation slides">
-                      <i class="bi bi-easel2"></i> Slides
                     </a>
                   </div>
                 </div>
@@ -169,42 +160,37 @@
             </article>
           </div>
 
-          <!-- ── PROJECT 3: Neuro-Symbolic AI ── -->
+          <!-- ── PROJECT 3: GRIPS ── -->
           <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="ai research">
             <article class="project-card">
               <div class="project-card-header" style="background:linear-gradient(135deg,var(--peach-light),var(--lavender-light));">
                 <div class="project-icon" style="background:white;">🧠</div>
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tag tag-ai">Neuro-Symbolic</span>
-                  <span class="project-tag tag-ml">Deep Learning</span>
+                  <span class="project-tag tag-ml">NLP</span>
                 </div>
-                <!-- TODO: Replace with your actual paper title -->
-                <h2 class="project-title">Neuro-Symbolic AI: [Your Paper Title]</h2>
+                <h2 class="project-title">GRIPS: Grounded Pre-SQL Signature for Structured Data Reasoning</h2>
               </div>
               <div class="project-card-body">
                 <p class="project-desc">
-                  <!-- TODO: Replace with actual description -->
-                  Research paper exploring the intersection of neural networks and symbolic
-                  reasoning. Proposed a novel architecture that [describe your approach].
-                  Demonstrated improvements in [metric] by [X]% compared to baseline approaches.
-                  Published / submitted to [Journal or Conference Name].
+                  Published at ACL 2026. Language models fail at structured-data reasoning not because
+                  they cannot produce SQL, but because they misalign questions with the schema before
+                  SQL generation begins. GRIPS is a neurosymbolic framework that separates
+                  question-to-schema grounding from SQL generation, improving accuracy by an average
+                  of 11 REMS points while reducing token usage by 47.8% across two benchmarks.
                 </p>
                 <div class="mt-auto">
                   <div class="d-flex flex-wrap gap-1 mb-3">
                     <span class="project-tag tag-python">Python</span>
-                    <span class="project-tag tag-ml">PyTorch</span>
-                    <span class="project-tag tag-ai">AI</span>
+                    <span class="project-tag tag-ml">LLMs</span>
+                    <span class="project-tag tag-ai">ACL 2026</span>
                   </div>
                   <div class="project-links">
-                    <a href="#" class="btn btn-sm" target="_blank" rel="noopener"
+                    <a href="assets/GRIPS.pdf" class="btn btn-sm" target="_blank" rel="noopener"
                        style="background:var(--peach-light);color:#c07a20;"
-                       aria-label="View paper">
+                       aria-label="View GRIPS paper">
                       <i class="bi bi-file-earmark-text"></i> Paper
                     </a>
-                    <span class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true"
-                          title="Repository coming soon">
-                      <i class="bi bi-github"></i> Code (Soon)
-                    </span>
                   </div>
                 </div>
               </div>
@@ -224,7 +210,7 @@
               </div>
               <div class="project-card-body">
                 <p class="project-desc">
-                  This portfolio website — built as the CS 463/563 Final Project. A fully
+                  This portfolio website, built as the CS 463/563 Final Project. A fully
                   responsive multi-page site using HTML5, CSS3 with custom properties, Bootstrap 5,
                   and vanilla JavaScript (ES6+). Features include scroll animations,
                   Bootstrap Offcanvas mobile nav, form validation, and a typing animation hero.
@@ -236,12 +222,11 @@
                     <span class="project-tag tag-js">JavaScript</span>
                   </div>
                   <div class="project-links">
-                    <!-- TODO: Add your actual GitHub repo link -->
                     <a href="https://github.com/MaliniSundar1625" class="btn btn-sm btn-outline-secondary"
                        target="_blank" rel="noopener" aria-label="View portfolio source on GitHub">
                       <i class="bi bi-github"></i> GitHub
                     </a>
-                    <a href="https://YOUR_USERNAME.github.io" class="btn btn-sm"
+                    <a href="https://MaliniSundar1625.github.io/Personal-Website" class="btn btn-sm"
                        target="_blank" rel="noopener"
                        style="background:var(--pink-light);color:#c05090;"
                        aria-label="View live portfolio site">
@@ -254,7 +239,7 @@
           </div>
 
           <!-- ── PROJECT 5: Placeholder Web App ── -->
-          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="web ai">
+          <div class="col-md-6 col-lg-4 fade-in-up project-item" data-category="web">
             <article class="project-card">
               <div class="project-card-header" style="background:linear-gradient(135deg,var(--sky-light),var(--mint-light));">
                 <div class="project-icon" style="background:white;">☁️</div>
@@ -262,7 +247,6 @@
                   <span class="project-tag tag-web">Full Stack</span>
                   <span class="project-tag tag-python">Python</span>
                 </div>
-                <!-- TODO: Replace with an actual project you've done, or remove this card -->
                 <h2 class="project-title">Weather Dashboard App</h2>
               </div>
               <div class="project-card-body">
@@ -336,26 +320,6 @@
           <p class="text-muted mt-3">No projects found in this category.</p>
         </div>
 
-        <!-- GitHub Repos Section (fetched via API in main.js) -->
-        <div class="mt-5 pt-3">
-          <div class="section-divider divider-lavender"></div>
-          <h3 class="h4 fw-bold mb-2">
-            <i class="bi bi-github me-2"></i>GitHub Activity
-          </h3>
-          <p class="text-muted mb-4">
-            Public repositories fetched live from GitHub
-            — <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">
-              view all on GitHub
-            </a>
-          </p>
-          <div id="githubRepos" class="row g-3">
-            <!-- Populated by fetchGithubRepos() in main.js -->
-            <div class="col-12 text-center text-muted" id="reposLoading">
-              <div class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></div>
-              Loading GitHub repositories…
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>

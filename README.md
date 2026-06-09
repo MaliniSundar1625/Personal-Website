@@ -1,7 +1,18 @@
-# Personal-Website
+# Malini Sundar – Personal Portfolio Website
 
-## Project Overview
-A responsive, multi-page personal portfolio website showcasing my background as a CS educator, Ph.D. student, and software developer. The site features pastel aesthetics, smooth scroll animations, a live GitHub API integration, real-time form validation, and several Bootstrap components not covered in class.
+> CS 463/563 – Intro to Web Development | Final Project | Portland State University
+
+## 🌐 Live Site
+
+**Deployed URL:** `https://YOUR_USERNAME.github.io/` ← *Update after deploying to GitHub Pages*
+
+**GitHub Repository:** `https://github.com/MaliniSundar1625` ← *Update with your repo link*
+
+---
+
+## 📋 Project Overview
+
+A responsive, multi-page personal portfolio website showcasing my background as a CS educator, Ph.D. candidate, and software developer. The site features pastel aesthetics, smooth scroll animations, a live GitHub API integration, real-time form validation, and several Bootstrap components not covered in class.
 
 ### Pages
 
@@ -14,7 +25,7 @@ A responsive, multi-page personal portfolio website showcasing my background as 
 
 ---
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
@@ -39,7 +50,30 @@ A responsive, multi-page personal portfolio website showcasing my background as 
 
 ---
 
-## Project Structure
+## 🚀 How to Run Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   cd YOUR_REPO
+   ```
+
+2. **Open in a browser:**
+   Simply open `index.html` in any modern browser.
+   No build tools or server required — this is a static site.
+
+   > **Tip:** For the GitHub API fetch to work correctly, serve the files from a local server
+   > (e.g., VS Code Live Server extension, or `python3 -m http.server 8080`) rather than
+   > opening via `file://`.
+
+3. **Update your GitHub username** in `js/main.js`:
+   ```js
+   const GITHUB_USERNAME = 'YOUR_GITHUB_USERNAME'; // ← Line ~147
+   ```
+
+---
+
+## 📁 Project Structure
 
 ```
 portfolio/
@@ -56,7 +90,7 @@ portfolio/
 
 ---
 
-##  Outside Libraries & Resources
+## 📦 Outside Libraries & Resources
 
 | Resource | URL | Purpose |
 |---|---|---|
@@ -76,7 +110,16 @@ portfolio/
 
 ---
 
-## Grading Checklist
+## 🌍 Deployment (GitHub Pages)
+
+1. Push all files to a public GitHub repository.
+2. Go to **Settings → Pages → Source**.
+3. Select branch: `main`, folder: `/ (root)`.
+4. Click **Save** — your site will be live at `https://YOUR_USERNAME.github.io/REPO_NAME/`.
+
+---
+
+## ✅ Grading Checklist
 
 - [x] Navbar navigating between pages
 - [x] About section with professional bio
@@ -95,7 +138,7 @@ portfolio/
 
 ---
 
-##  Commit History Summary
+## 💬 Commit History Summary
 
 | # | Message | Files Changed |
 |---|---|---|
@@ -110,5 +153,4 @@ portfolio/
 
 ---
 
-*Built with ♡ by Malini — CS 463/563 Final Project, Portland State University, 2026*
-
+*Built with ♡ by Malini Sundar — CS 463/563 Final Project, Portland State University, 2025*
