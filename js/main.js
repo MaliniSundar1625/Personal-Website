@@ -434,6 +434,25 @@ const initJQueryFeatures = () => {
 };
 
 /* ─────────────────────────────────────────────────────────────
+   11. MOBILE OFFCANVAS NAV — auto-close on link click
+   Closes the offcanvas when a nav link inside it is clicked,
+   so same-page anchor links (e.g. #about) don't leave the
+   menu hanging open over the content.
+───────────────────────────────────────────────────────────── */
+const initOffcanvasNav = () => {
+  const offcanvasEl = document.getElementById('navOffcanvas');
+  if (!offcanvasEl) return;
+
+  offcanvasEl.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const instance = bootstrap.Offcanvas.getInstance(offcanvasEl)
+                    || new bootstrap.Offcanvas(offcanvasEl);
+      instance.hide();
+    });
+  });
+};
+
+/* ─────────────────────────────────────────────────────────────
    INITIALISATION — runs when the DOM is ready
 ───────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -444,5 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCharCounter();
   initProjectFilters();
+  initOffcanvasNav();
   initJQueryFeatures();
 });
